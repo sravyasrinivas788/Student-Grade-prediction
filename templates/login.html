@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: #4caf50;
+            border-color: #4caf50;
+            width: 100%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Login to your Account</h2>
+        <form name="f1" onsubmit="return valid()" action="/register" method="post">
+            <div class="form-group">
+                <label for="name">Name of the student</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="roll">Roll number of the student</label>
+                <input type="text" class="form-control" id="roll" name="roll" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Submit</button>
+        </form>
+        <br>
+        <form action="/register">
+            <button class = "btn btn-custom" type="submit">
+                Create Account
+            </button>
+    </div>
+
+    <script>
+        function valid() {
+            var n = document.f1.name.value;
+            var r = document.f1.roll.value;
+            var regex = /^[A-Z]*$/;
+
+            if (r.length !== 12) {
+                alert("Enter a valid roll number");
+                return false;
+            }
+
+            if (isNaN(r)) {
+                alert("Enter a valid roll number containing only numbers");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+

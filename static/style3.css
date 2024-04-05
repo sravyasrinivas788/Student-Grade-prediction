@@ -1,0 +1,9 @@
+.warn{
+
+    text-align: center;
+    color: red;
+    padding-top: 10%;
+}
+body{
+    background-image: url('img.png');
+}

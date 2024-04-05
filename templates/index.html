@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <script src="index.js"></script>
+ 
+  
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  <style>
+    body {
+       
+        background-image:url('/static/images/blue-abstract-gradient-wave-vector-background_53876-111548.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 100px auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .submit {
+        text-align: center;
+    }
+    .text-center{
+        text-align: center;
+        
+      
+    }
+    .tit{
+        text-align: center;
+        color: brown;
+    }
+</style>
+    
+  <head>
+    <h1 class="tit">Enter student details</h1>
+  </head>
+<body>
+  
+
+    <div class="container">
+  
+
+    <form  name="f2" onsubmit="return check()" class="form" action="/predict" method="POST">
+      <div class="form-group">
+        
+    <label for="school">School</label>
+    <select id="school" name="school" class="form-control">
+      <option value="0">GP</option>
+      <option value="1">MS</option>
+    </select>
+      </div>
+
+   
+    <div class="form-group">
+    
+    
+    
+    <label for="sex">Sex</label>
+    <select id="sex" name="sex" class="form-control">
+      <option value="0">F</option>
+      <option value="1">M</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age" class="form-control">
+    </div>
+    <div class="form-group">
+    
+   
+    
+    <label for="address">Address</label>
+    <select id="address" name="address" class="form-control">
+      <option value="0">U</option>
+      <option value="1">R</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="famsize">Famsize</label>
+    <select id="famsize" name="famsize" class="form-control">
+      <option value="0">GT3</option>
+      <option value="1">LE3</option>
+    </select>
+    </div>
+    <div class="form-group">
+   
+    <label for="Pstatus">Pstatus</label>
+    <select id="Pstatus" name="Pstatus" class="form-control">
+      <option value="0">A</option>
+      <option value="1">T</option>
+    </select>
+    </div>
+    <div class="form-group">
+
+    <label for="medu">Medu</label>
+    <input type="text" id="medu" name="Medu" class="form-control">
+    <br>
+    </div>
+    <div class="form-group">
+
+    <label for="fedu">Fedu</label>
+    <input type="text" id="fedu" name="Fedu" class="form-control">
+    </div>
+    <div class="form-group">
+    
+
+    <label for="Mjob">Mjob</label>
+    <select id="Mjob" name="Mjob" class="form-control">
+      <option value="0">at_home</option>
+      <option value="1">health</option>
+      <option value="2">other</option>
+      <option value="2">services</option>
+      <option value="4">teacher</option>
+    
+
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="Fjob">Fjob</label>
+    <select id="Fjob" name="Fjob" class="form-control">
+        <option value="0">at_home</option>
+      <option value="1">health</option>
+      <option value="2">other</option>
+      <option value="2">services</option>
+      <option value="4">teacher</option>
+    
+     
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="reason">Reason</label>
+    <select id="reason" name="reason" class="form-control">
+        <option value="0">course</option>
+        <option value="1">other</option>
+        <option value="2">home</option>
+        <option value="2">reputation</option>
+        
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="guardian">Guradian</label>
+    <select id="guardian" name="guardian" class="form-control">
+      <option value="0">mother</option>
+      <option value="1">father</option>
+      <option value="2">other</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="traveltime">Traveltime</label>
+    <input type="text" id="traveltime" name="traveltime" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="studytime">Studytime</label>
+    <input type="text" id="studytime" name="studytime" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="failures">Failures</label>
+    <input type="text" id="failures" name="failures" class="form-control">
+    
+  </div>
+
+  <div class="form-group">
+  
+    
+    <label for="schoolsup">Schoolsup</label>
+    <select id="schoolsup" name="schoolsup" class="form-control">
+      <option value="0">yes</option>
+      <option value="1">no</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="famsup">Famsup</label>
+    <select id="famsup" name="famsup" class="form-control">
+      <option value="0">no</option>
+      <option value="1">yes</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="paid">Paid</label>
+    <select id="paid" name="paid" class="form-control">
+      <option value="0">no</option>
+      <option value="1">yes</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="activities">Activities</label>
+    <select id="activities" name="activities" class="form-control">
+      <option value="0">no</option>
+      <option value="1">yes</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="nursery">Nursery</label>
+    <select id="nursery" name="nursery" class="form-control">
+      <option value="0">yes</option>
+      <option value="1">no</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="higher">Higher</label>
+    <select id="higher" name="higher" class="form-control">
+      <option value="0">yes</option>
+      <option value="1">no</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="internet">Internet</label>
+    <select id="internet" name="internet" class="form-control">
+      <option value="0">no</option>
+      <option value="1">yes</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="romantic">Relationship</label>
+    <select id="romantic" name="romantic" class="form-control">
+      <option value="0">no</option>
+      <option value="1">yes</option>
+      
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="famrel">Famrel</label>
+    <input type="text" id="famrel" name="famrel" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="freetime">Freetime</label>
+    <input type="text" id="freetime" name="freetime" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="goout">Goout</label>
+    <input type="text" id="goout" name="goout" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="Dalc">Dalc</label>
+    <input type="text" id="Dalc" name="Dalc" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="Walc">Walc</label>
+    <input type="text" id="Walc" name="Walc" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="health">Health</label>
+    <input type="text" id="health" name="health" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="absences">Absences</label>
+    <input type="text" id="absences" name="absences" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="G1">G1</label>
+    <input type="text" id="G1" name="G1" class="form-control">
+    </div>
+    <div class="form-group">
+    <label for="G2">G2</label>
+    <input type="text" id="G2" name="G2" class="form-control">
+    </div>
+    
+
+
+
+
+    <div class="text-center">
+    <input  class="submit" type="submit" value="Submit"  class="btn btn-primary">
+    </div>
+  </form>
+    </div>
+ 
+</body>
+</html>
+     
+

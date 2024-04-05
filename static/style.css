@@ -1,0 +1,32 @@
+body{
+  background-image: url();
+  
+}
+
+.tit{
+    color: brown;
+    text-align: center;
+    
+   
+}
+.form{
+    padding-left: 20%;
+}
+.half{
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .inputs:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .inputs{
+    font-size: larger;
+  }
+  .submit{
+   align-items: center;
+    font-size: larger;
+  }

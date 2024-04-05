@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add your custom CSS file -->
+    <link rel="stylesheet" href="/static/style.css"> <!-- Note: You can create "style.css" for custom styles -->
+    <title>Result Display</title>
+</head>
+<body style="background-color: #f8f9fa;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card border-primary shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3 text-primary">Result</h5>
+                        <hr class="my-2">
+                        <div class="result-info">
+                            <h4 class="mb-3">Predicted Marks:</h4>
+                            <h2 class="display-5 text-success">{{prediction}}</h2>
+                        </div>
+                        <div class="mt-4">
+                            <a href="/" class="btn btn-outline-primary btn-sm">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS CDN link (optional, needed for certain components and features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
